@@ -27,22 +27,114 @@
                 <hr>
 
                 <div class="flex" >
-                    <div class="flex flex-column w-50" id="left" >
-                        <div class="f2 mb3"> Experience </div>
-                        <div class="f5 mb2"> Carnegie Mellon University </div>
-                        <div class="flex mb2 justify-between" >
-                            <div class="f7"> Bachelor of Science in Logic & Computation </div>
-                            <div class="f7"> May 2020 </div>
+                    <div class="flex flex-column w-50 mr2" id="left" >
+                        <div>
+                        {{macro.big_text("Education")}}
+                        {{macro.position_card("Carnegie Mellon University",
+                            "Bachelor of Science in Logic & Computation",
+                            "May 2020",
+                            "Selected Courses: Computer Systems, Digital Architecture, Principles of Software Construction, Statistics, Probability, Machine Learning, Formal Logic, Theoretical CS"
+                        )}}
                         </div>
-                        <div class="f7" > Selected Courses: Computer Systems, Digital Architecture, Principles of Software Construction, Statistics, Probability, Machine Learning, Formal Logic, Great Theoretical Ideas in CS
+                        
+                        <div class="flex flex-column justify-center h-100">
+
+                            {{macro.big_text("Technical Proficiencies")}}
+                            <div class="flex">
+                                {% set imgs = [{path: "python_logo.svg", text: "Python"},
+                                {path: "c_logo.svg", text: "C"},
+                                {path: "kotlin_logo.svg", text: "Kotlin"},
+                                {path: "mithril_logo.png", text: "Mithril"},
+                                {path: "git_logo.png", text: "Git"},
+                                {path: "js_logo.png", text: "Javascript"}
+                            ]%}
+                            {% for img in imgs %}
+                                {{macro.icon_text("imgs/" + img.path, img.text)}}
+                            {% endfor %}
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-column" id="right" >
-                         {{macro.smallText("hello")}}
+                    <div class="flex flex-column w-50 ml2" id="right" >
+                        {{macro.big_text("Experience")}}
+                        {{macro.position_card("Maven Machines",
+                            "Software Intern",
+                            "Summer 2018",
+                            "Worked alongside full-time engineers developing management technologies for trucking companies. Designed, coded, and shipped several quality of life improvements to their android app. Acquainted myself with agile, scrum, and life at a startup."
+                        )}}
+
+                        {{macro.position_card("Ultraworking",
+                            "Web Dev Contractor",
+                            "2018-2019",
+                            "Coordinated remotely to prototype proof-of-concept features for a javascript-mithril web app. Experimented with creative ways to produce dynamic content with no backend."
+                        )}}
+
+                        {{macro.med_text("CMU Academic Development")}}
+                        {{macro.title_date_card("Computer Systems Tutor",
+                            "2018-2019")}}
+                        {{macro.title_date_card("Theoretical Computer Science Tutor",
+                            "2019")}}
                     </div>
 
                 </div>
+
+                {{macro.big_text("Projects")}}
+                <div class="flex justify-between" >
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.project_card("Energy Tracker App",
+                            "An alarm prompts you hourly to report how much energy you have. Exports all data to csv for use with quantified self style research. Written in Java. LINK_HERE. Write up on 3 months of use here. "
+                        )}}
+                    </div>
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.project_card("Tartan Hacks 2019 \"Friz\"",
+                            "A partially implimented p2p messaging app that uses reverse-Tor packets to anonymize users and disconnect their IP address from their identity. Won \"Most Ambitious Failure\""
+                        )}}
+                    </div>
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.project_card("Alice in Canvas Land",
+                            "A web based puzzle game that requires physically exploring CMU campus to crack the code. Levels designed in Google Sheets and animated with HTML Canvas. LINK"
+                        )}}
+                    </div>
+                </div>
+
+                <div class="flex justify-between" >
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.project_card("Youtube Youtility",
+                            "A desktop electron app to help streamline the process of getting music from youtube. Allows bulk downloads from playlists, and bulk editing of metadata so your music player of choice can group by album."
+                        )}}
+                    </div>
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.project_card("ML Playground",
+                            "An interactive environment to play with the K-Nearest Neighbors algorithm. Lets you draw the digits to train and test on, allowing you to explore edge cases. Built in pygame."
+                        )}}
+                    </div>
+
+                    <div class="flex flex-column w-30" >
+                       
+                    </div>
+                </div>
+
+      
+                <div class="flex">
+                    <div class="flex flex-column w-50 mr2">
+                        {{macro.big_text("Interests")}}
+                        {{macro.sml_text("The Decentralized Internet, Cryptography, Security, Explorable Explanations, Memex design, Formal Epistemology, Crytpocurrencies")}}
+                    </div>
+                    <div class="flex flex-column w-50 ml2">
+                        {{macro.big_text("Misc")}}
+                        {{macro.sml_text("Eagle Scout
+                200-hour registered Yoga Teacher
+                Professional Close-up Magician"
+                        )}}
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>

@@ -1,3 +1,55 @@
-{% macro smallText(text) %}
-<div class="f7"> {{text}} </div>
+{# TEXT N AT #}
+
+{% macro sml_text(text) %}
+<div class="f6 mt2"> {{text}} </div>
 {% endmacro %}
+
+{% macro med_text(text) %}
+<div class="f5 b mt3"> {{text}} </div>
+{% endmacro %}
+
+{% macro big_text(text)  %}
+    <div class="f2 mb2 mt3 orange"> {{text}} </div>
+{%endmacro %}
+
+{# BIGGER COMPOSED ELEMENTS #}
+
+{% macro title_date_card(title, date) %}
+    <div class="flex justify-between">
+        {{sml_text(title)}}
+        {{sml_text(date)}}
+    </div>
+{% endmacro %}
+
+{% macro position_card(title, position, date, description) %}
+{{med_text(title)}}
+    {{title_date_card(position, date)}}
+    {{sml_text(description)}}
+{% endmacro %}
+
+
+
+{% macro project_card(name, description) %}
+    {{med_text(name)}}
+    {{sml_text(description)}}
+{% endmacro %}
+
+{# iMAGE STUFF #}
+
+{% macro image_icon(img_path) %}
+    <div class="pa1 tc">
+        <img
+            src={{img_path}}
+            class="dib" style="width: 3rem; height: 3rem">
+    </div>
+{% endmacro %}
+
+
+{% macro icon_text(img_path, text) %}
+    <div class="flex flex-column items-center" >
+        {{image_icon(img_path)}}
+        {{(text)}}
+    </div>
+{% endmacro %}
+
+
