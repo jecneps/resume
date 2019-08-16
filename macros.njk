@@ -1,7 +1,7 @@
 {# TEXT N AT #}
 
 {% macro sml_text(text) %}
-<div class="f6 mt2"> {{text}} </div>
+<div class="f7 mt2"> {{text}} </div>
 {% endmacro %}
 
 {% macro med_text(text) %}
@@ -11,6 +11,10 @@
 {% macro big_text(text)  %}
     <div class="f2 mb2 mt3 orange"> {{text}} </div>
 {%endmacro %}
+
+{% macro sml_link_text(text, url, link_text) %}
+    <div class="f6 mt2"> {{text}} <a href={{url}} class="orange">{{link_text}}</a> </div>
+{% endmacro %}
 
 {# BIGGER COMPOSED ELEMENTS #}
 
@@ -29,9 +33,9 @@
 
 
 
-{% macro project_card(name, description) %}
+{% macro project_card(name, description, url, link_text) %}
     {{med_text(name)}}
-    {{sml_text(description)}}
+    {{sml_link_text(description, url, link_text)}}
 {% endmacro %}
 
 {# iMAGE STUFF #}
