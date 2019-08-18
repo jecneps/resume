@@ -11,77 +11,69 @@
         <div class="border_box">
             <div class="ruler">
 
-                <div class="flex justify-between" >
-                    <div class="f2" >
-                        Jacob Spence
+                <div class="flex justify-center" >
+                    <div class="flex">
+                        <span class="f1 mr2" > Jacob </span> <span class="f1 orange"> Spence</span>
+                        
                     </div>
-                    <div class="flex" >
-                        <div>
-                            jpspence@andrew.cmu.edu
-                        </div>
-                        <div>
-                            412-512-3871
-                        </div>
-                    </div>
+                    
                 </div>
                 <hr>
-
+                <div class="flex flex-column w-100 items-center">
+                    {{macro.sml_text_nm("jpspence@gmail.com")}}
+                    {{macro.sml_text_nm("412-512-3871")}}
+                </div>
                 <div class="flex" >
-                    <div class="flex flex-column w-50 mr2" id="left" >
+                    <div class="flex flex-column mr2" style="width:65%" id="left" >
                         <div>
-                        {{macro.big_text("Education")}}
+                        {{macro.big_text_nm("Education")}}
                         {{macro.position_card("Carnegie Mellon University",
                             "Bachelor of Science in Logic & Computation",
                             "May 2020",
-                            "Selected Courses: Computer Systems, Digital Architecture, Principles of Software Construction, Statistics, Probability, Machine Learning, Formal Logic, Theoretical CS"
+                            "Selected Courses: Computer Systems, Digital Architecture, Software Construction, Statistics, Probability, Machine Learning, Formal Logic, Theoretical Comp Sci"
                         )}}
                         </div>
                         
-                        <div class="flex flex-column justify-center h-100">
-
-                            {{macro.big_text("Technical Proficiencies")}}
-                            <div class="flex">
-                                {% set imgs = [{path: "python_logo.svg", text: "Python"},
-                                {path: "c_logo.svg", text: "C"},
-                                {path: "kotlin_logo.svg", text: "Kotlin"},
-                                {path: "mithril_logo.png", text: "Mithril"},
-                                {path: "git_logo.png", text: "Git"},
-                                {path: "js_logo.png", text: "Javascript"}
-                            ]%}
-                            {% for img in imgs %}
-                                {{macro.icon_text("imgs/" + img.path, img.text)}}
-                            {% endfor %}
-                            </div>
-                        </div>
+                        
                     </div>
 
-                    <div class="flex flex-column w-50 ml2" id="right" >
-                        {{macro.big_text("Experience")}}
+                    <div class="flex flex-column  ml2" id="right" >
+                        
+                    </div>
+
+                </div>
+                {{macro.big_text("Experience")}}
+                <div class="flex justify-between" >
+
+                    <div class="flex flex-column w-30" >
                         {{macro.position_card("Maven Machines",
                             "Software Intern",
                             "Summer 2018",
                             "Worked alongside full-time engineers developing management technologies for trucking companies. Designed, coded, and shipped several quality of life improvements to their android app. Acquainted myself with agile, scrum, and life at a startup."
                         )}}
+                    </div>
 
+                    <div class="flex flex-column w-30" >
                         {{macro.position_card("Ultraworking",
                             "Web Dev Contractor",
                             "2018-2019",
                             "Coordinated remotely to prototype proof-of-concept features for a javascript-mithril web app. Experimented with creative ways to produce dynamic content with no backend."
                         )}}
+                    </div>
 
+                    <div class="flex flex-column w-30" >
                         {{macro.med_text("CMU Academic Development")}}
                         {{macro.title_date_card("Computer Systems Tutor",
                             "2018-2019")}}
-                        {{macro.title_date_card("Theoretical Computer Science Tutor",
+                        {{macro.title_date_card("Theoretical Comp Sci Tutor",
                             "2019")}}
                     </div>
-
                 </div>
 
                 {{macro.big_text("Projects")}}
                 <div class="flex justify-between" >
 
-                    <div class="flex flex-column w-25" >
+                    <div class="flex flex-column w-30" >
                         {{macro.project_card("Energy Tracker App",
                             "Alarm prompts you hourly to report how much energy you have. Exports all data to csv for use with quantified self style research. Written in Java.",
                             "https://play.google.com/store/apps/details?id=com.approvequestions.energytracker",
@@ -89,7 +81,7 @@
                         )}}
                     </div>
 
-                    <div class="flex flex-column w-25" >
+                    <div class="flex flex-column w-30" >
                         {{macro.project_card("Tartan Hacks 2019 \"Friz\"",
                             "Partially implimented p2p messaging app that uses reverse-Tor packets to anonymize users and disconnect their IP address from their identity. Won \"Most Ambitious Failure\""
                         )}}
@@ -123,26 +115,36 @@
                     </div>
 
                     <div class="flex flex-column w-30" >
-                       
+                        
                     </div>
                 </div>
-
-      
                 <div class="flex">
-                    <div class="flex flex-column w-50 mr2">
-                        {{macro.big_text("Interests")}}
-                        {{macro.sml_text("The Decentralized Internet, Cryptography, Security, Explorable Explanations, Memex design, Formal Epistemology, Crytpocurrencies")}}
-                    </div>
+                    
                     <div class="flex flex-column w-50 ml2">
                         {{macro.big_text("Misc")}}
-                        {{macro.sml_text("Eagle Scout
-                200-hour registered Yoga Teacher
-                Professional Close-up Magician"
-                        )}}
+                        {{macro.sml_text_nm("Eagle Scout")}}
+                        {{macro.sml_text_nm("200-hour registered Yoga Teacher")}}
+                        {{macro.sml_text_nm("Professional Close-up Magician")}}
                     </div>
 
-                </div>
+                    <div class="flex flex-column w-50">
 
+                        {{macro.big_text("Technical Proficiencies")}}
+                        <div class="flex">
+                            {% set imgs = [{path: "python_logo.svg", text: "Python"},
+                                {path: "c_logo.svg", text: "C"},
+                                {path: "kotlin_logo.svg", text: "Kotlin"},
+                                {path: "mithril_logo.png", text: "Mithril"},
+                                {path: "git_logo.png", text: "Git"},
+                                {path: "js_logo.png", text: "Javascript"}
+                            ]%}
+                            {% for img in imgs %}
+                                {{macro.icon_text("imgs/" + img.path, img.text)}}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div> 
             </div>
         </div>
     </div>

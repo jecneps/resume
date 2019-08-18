@@ -1,7 +1,7 @@
 {# TEXT N AT #}
 
 {% macro sml_text(text) %}
-<div class="f7 mt2"> {{text}} </div>
+<div class="f6 mt2"> {{text}} </div>
 {% endmacro %}
 
 {% macro med_text(text) %}
@@ -14,6 +14,18 @@
 
 {% macro sml_link_text(text, url, link_text) %}
     <div class="f6 mt2"> {{text}} <a href={{url}} class="orange">{{link_text}}</a> </div>
+{% endmacro %}
+
+{% macro sml_text_nm(text) %}
+    <div class="f6"> {{text}} </div>
+{% endmacro %}
+
+{% macro title(first, second) %}
+    <span class="f2 mb2 mt3" > {{first}} </span> <span class="f2 mb2 mt3 orange" > {{second}}</span>
+{% endmacro %}
+
+{% macro big_text_nm(text) %}
+    <div class="f2 mb2 orange"> {{text}} </div>
 {% endmacro %}
 
 {# BIGGER COMPOSED ELEMENTS #}
@@ -44,7 +56,7 @@
     <div class="pa1 tc">
         <img
             src={{img_path}}
-            class="dib" style="width: 3rem; height: 3rem">
+            class="dib" style="width: 3rem; height: 3rem; filter: grayscale(70%)">
     </div>
 {% endmacro %}
 
@@ -52,7 +64,7 @@
 {% macro icon_text(img_path, text) %}
     <div class="flex flex-column items-center" >
         {{image_icon(img_path)}}
-        {{(text)}}
+        <div class="f6">{{(text)}} </div>
     </div>
 {% endmacro %}
 
