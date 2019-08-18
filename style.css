@@ -4,8 +4,8 @@
     height: 11in;
     border: 1px solid black;
     left: 50%;
-    top: 30px;
     transform: translateX(-50%);
+    background: white;
 }
 
 .border_box {
@@ -18,4 +18,12 @@
     width: 100%;
     height:100%;
     
+}
+
+body {
+    background: #696969;
+}
+
+hr {
+    border: 1px solid #ff6300;
 }
