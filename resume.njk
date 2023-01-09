@@ -20,10 +20,10 @@
                 </div>
                 <hr>
                 <div class="flex flex-column w-100 items-center">
-                    {{macro.sml_text_nm("jpspence@gmail.com")}}
+                    {{macro.sml_text_nm("jejcneps@gmail.com")}}
                     {{macro.sml_text_nm("412-512-3871")}}
                 </div>
-                <div class="flex" >
+                <div class="flex mb3" >
                     <div class="flex flex-column mr2" style="width:65%" id="left" >
                         <div>
                         {{macro.big_text_nm("Education")}}
@@ -43,10 +43,18 @@
                 <div class="flex justify-between" >
 
                     <div class="flex flex-column w-30" >
-                        {{macro.position_card("Maven Machines",
-                            "Software Intern",
-                            "Summer 2018",
-                            "Worked alongside full-time engineers developing management technologies for trucking companies. Designed, coded, and shipped several quality of life improvements to their android app. Acquainted myself with agile, scrum, and life at a startup."
+                        {{macro.position_card("Bahabar",
+                            "CTO",
+                            "Spring 2022-Present",
+                            "Designed a DSL for cocktails that allows drink recipes to be turned into in-browser animated tutorials. Built and deployed a web app using the former that allows bars to reduce training costs and inventory shrinkage."
+                        )}}
+                    </div>
+
+                    <div class="flex flex-column w-30" >
+                        {{macro.position_card("Google",
+                            "L3 SWE",
+                            "2020-2021",
+                            "Worked on the Cloud Infrastructure team integrating open-source terraform linting tools into Google's static analysis pipeline. With the Search Compliance team implemented better metrics for tracking compliance issues which revealed a serious hole in our previous logging strategy."
                         )}}
                     </div>
 
@@ -58,6 +66,20 @@
                         )}}
                     </div>
 
+                    
+
+                    
+                </div>
+                <div class="flex justify-between mb2">
+                    
+                    <div class="flex flex-column w-30" >
+                        {{macro.position_card("Maven Machines",
+                            "Software Intern",
+                            "Summer 2018",
+                            "Worked alongside full-time engineers developing management technologies for trucking companies. Designed, coded, and shipped several quality of life improvements to their android app. Acquainted myself with agile, scrum, and life at a startup."
+                        )}}
+                    </div>
+                    
                     <div class="flex flex-column w-30" >
                         {{macro.med_text("CMU Academic Development")}}
                         {{macro.title_date_card("Computer Systems Tutor",
@@ -65,59 +87,18 @@
                         {{macro.title_date_card("Theoretical Comp Sci Tutor",
                             "2019")}}
                     </div>
+                    <div class="flex flex-column w-30" >
+                       
+                    </div>
+
                 </div>
 
-                {{macro.big_text("Projects")}}
-                <div class="flex justify-between" >
+                
 
-                    <div class="flex flex-column w-30" >
-                        {{macro.project_card("Energy Tracker App",
-                            "Alarm prompts you hourly to report how much energy you have. Exports all data to csv for use with quantified self style research. Written in Java.",
-                            "https://play.google.com/store/apps/details?id=com.approvequestions.energytracker",
-                            "Google Play Store"
-                        )}}
-                    </div>
-
-                    <div class="flex flex-column w-30" >
-                        {{macro.project_card("Tartan Hacks 2019 \"Friz\"",
-                            "Partially implimented p2p messaging app that uses reverse-Tor packets to anonymize users and disconnect their IP address from their identity. Won \"Most Ambitious Failure\""
-                        )}}
-                    </div>
-
-                    <div class="flex flex-column w-30" >
-                        {{macro.project_card("Alice in Canvas Land",
-                            "Web based puzzle game that requires physically exploring CMU campus to crack the code. Levels designed in Google Sheets and animated with HTML Canvas.",
-                            "https://github.com/jecneps/alice-puzzle",
-                            "jecneps/alice-puzzle"
-                        )}}
-                    </div>
-                </div>
-
-                <div class="flex justify-between" >
-
-                    <div class="flex flex-column w-30" >
-                        {{macro.project_card("Youtube Utility",
-                            "Desktop electron app to streamline getting music from youtube. Allows bulk downloads from playlists, and bulk editing of metadata.",
-                            "https://github.com/jecneps/youtube-downloader",
-                            "jecneps/youtube-downloader"
-                        )}}
-                    </div>
-
-                    <div class="flex flex-column w-30" >
-                        {{macro.project_card("ML Playground",
-                            "Interactive environment to play with the K-Nearest Neighbors algorithm. Lets you draw the digits to train and test on, allowing you to explore edge cases. Built in pygame.",
-                            "https://github.com/jecneps/ML-PlayGround",
-                            "jecneps/ML-PlayGround"
-                        )}}
-                    </div>
-
-                    <div class="flex flex-column w-30" >
-                        
-                    </div>
-                </div>
+                
                 <div class="flex">
                     
-                    <div class="flex flex-column w-50 ml2">
+                    <div class="flex flex-column w-50">
                         {{macro.big_text("Misc")}}
                         {{macro.sml_text_nm("Eagle Scout")}}
                         {{macro.sml_text_nm("200-hour registered Yoga Teacher")}}
@@ -128,12 +109,13 @@
 
                         {{macro.big_text("Technical Proficiencies")}}
                         <div class="flex">
-                            {% set imgs = [{path: "python_logo.svg", text: "Python"},
-                                {path: "c_logo.svg", text: "C"},
-                                {path: "kotlin_logo.svg", text: "Kotlin"},
-                                {path: "mithril_logo.png", text: "Mithril"},
+                            {% set imgs = [
+                                {path: "go_logo.svg", text: "Golang"},
+                                {path: "clojure_logo.svg", text: "Clojure"},
+                                {path: "react_logo.svg", text: "React"},
                                 {path: "git_logo.png", text: "Git"},
-                                {path: "js_logo.png", text: "Javascript"}
+                                {path: "ts_logo.png", text: "TypeScript"},
+                                {path: "python_logo.svg", text: "Python"}
                             ]%}
                             {% for img in imgs %}
                                 {{macro.icon_text("imgs/" + img.path, img.text)}}
